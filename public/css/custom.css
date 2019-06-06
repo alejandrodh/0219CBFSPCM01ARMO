@@ -1,0 +1,9 @@
+.avatar{
+  border-radius: 90%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.no-navbar .nav{
+  display: none !important;
+}
