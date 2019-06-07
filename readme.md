@@ -1,3 +1,13 @@
+## Pasos para instalar el Proyecto
+1 Descargar el repositorio
+2 Por consola ingresar a la carpeta del repositorio.
+3 Ejecutar `composer install` para que composer descargue todas las carpetas y paquetes necesarios para correr Laravel.
+4 Revisar que exista archivo `.env`. Si no está copiar el archivo `.env-example` y eliminar `-example`
+5 Chequear que tenga valores la posicion `APP_KEY`. Si no está hay que crearla con el comando `php artisan key:generate`
+6 Revisar la información de conexión a la db. Son las posicones `DB_ `.
+7 Ejecutar `php artisan serve` para iniciar el servidor web.
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
