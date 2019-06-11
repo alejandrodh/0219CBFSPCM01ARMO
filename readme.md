@@ -7,6 +7,13 @@
 6. Revisar la información de conexión a la db. Son las posicones `DB_ `.
 7. Ejecutar `php artisan serve` para iniciar el servidor web.
 
+> Importante: El repositorio tiene 2 bases de datos movies_db y la base de datos de posteos. Elegir desde env según el caso.
+
+> db en root /blend_tm01.zip
+
+> Ejecutar php artisan storage:link para guardar y recuperar datos
+
+
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 

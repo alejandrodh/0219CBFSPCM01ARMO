@@ -9,7 +9,15 @@
     <ul>
       @forelse ($peliculas as $pelicula)
         <li><a href="/movie/{{$pelicula->id}}">{{$pelicula->title}}: </a>
-        {{$pelicula->rating}}</li>
+        {{$pelicula->rating}} - Género: {{$pelicula->genre->name}}</li>
+        <p>actores</p>
+        <ul>
+          {{-- @dd($pelicula->actors); --}}
+          @foreach ($pelicula->actors as $actor)
+            <li>{{$actor->first_name}} {{$actor->last_name}}</li>
+
+          @endforeach
+        </ul>
       @empty
       @endforelse
     </ul>

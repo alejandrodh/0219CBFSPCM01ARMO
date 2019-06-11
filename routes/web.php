@@ -26,6 +26,7 @@
 //   return view('peliculas',$vac);
 // });
 Route::get('/movies', 'movieController@index');
+Route::get('/genres', 'GenreController@index');
 Route::get('/movie/{id}','movieController@show');
 Route::get('/actores', 'actorController@index');//El ejercicio pide directory pero index es el standard para listados.
 Route::get('/actor/{id}', 'actorController@show');
@@ -41,3 +42,7 @@ Route::get('/register', function(){
 Route::get('/login', function(){
   return view('login');
 });
+Route::get('/post/{id}', 'PostController@show');
+Route::get('/newpost', 'PostController@create');
+Route::post('/newpost', 'PostController@store');
+Route::post('/deletepost', 'PostController@delete');

@@ -1,15 +1,3 @@
-<?php
-  //include_once "funciones.php";
-  //var_dump($_SESSION);
-  // include_once 'init.php';
-  //
-  // if(isset($_SESSION["email"])){
-  //   $usuario = $dbMysql->buscarPorEmail($_SESSION["email"]);
-  // } //transformarlo a función traerUsuarioLogueado() como método de la db;
-  // var_dump($usuario);
-  // exit;
- ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -70,7 +58,7 @@
         <a href="#">Back to top</a>
       </p>
     </footer>
-  @show  {{-- Crear una sección y finalizarla con @show permite sobre escribirla o agregarle info en las vistas que la extienden. --}}
+    @show  {{-- Crear una sección y finalizarla con @show permite sobre escribirla o agregarle info en las vistas que la extienden. --}}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

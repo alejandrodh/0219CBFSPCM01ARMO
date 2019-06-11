@@ -31,6 +31,8 @@ no-navbar
   </div>
   <div class="row">
     <form class="col-md-6 offset-md-3" action="register.php" method="POST" enctype="multipart/form-data">
+      @csrf
+      {{-- {{csrf_field()}} --}}
   <?php if(isset($errores["name"])):?>
     <div class="form-group">
       <label for="name">Nombre</label>
@@ -162,5 +164,4 @@ no-navbar
 </div>
 
 @endsection
-@section('footer') {{-- Agregamos la sección vacía para que no muestre footer en el registro. Solo funcionará si en master declaramos la sección y la cerramos con @show --}}
-@endsection
+@section('footer', '') {{-- Agregamos la sección vacía para que no muestre footer en el registro. Solo funcionará si en master declaramos la sección y la cerramos con @show --}}
