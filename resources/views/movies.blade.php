@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="js/peliculas.js"></script>
   </head>
   <body>
     <h1>Listado de peliculas</h1>
-    <ul>
+    <h2 style="display:none">HAY PELIS NUEVAS, CLICKEA ACA</h2>
+    <ul class="listadoPeliculas">
+      
       @forelse ($peliculas as $pelicula)
-        <li><a href="/movie/{{$pelicula->id}}">{{$pelicula->title}}: </a>
-        {{$pelicula->rating}} - Género: {{$pelicula->genre->name}}</li>
+        <li class="movie"><a href="/movie/{{$pelicula->id}}">{{$pelicula->title}}: </a>
+        {{$pelicula->rating}}</li>
         <p>actores</p>
         <ul>
           {{-- @dd($pelicula->actors); --}}
@@ -22,7 +25,7 @@
       @endforelse
     </ul>
 
-{{$peliculas->links()}}
+
 
   </body>
 </html>

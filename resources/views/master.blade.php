@@ -9,6 +9,10 @@
 
     <title>@yield('title')</title>
 
+    @yield("jsextra")
+
+    @yield("cssextra")
+
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
