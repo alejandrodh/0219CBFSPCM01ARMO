@@ -23,8 +23,8 @@ class MovieController extends Controller
       //     "Captain Marvel",
       //     "The Mule",
       //   ];
+        // $peliculas = Movie::paginate(5);
         $peliculas = Movie::paginate(5);
-
         $vac = compact('peliculas');
         return view('movies',$vac);
 
@@ -57,7 +57,7 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Movie $movie)
     {
       $peliculas = Movie::find($id);
 

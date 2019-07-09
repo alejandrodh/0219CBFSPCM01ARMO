@@ -8,6 +8,8 @@
     <h1>Listado de peliculas</h1>
     <ul>
       @forelse ($peliculas as $pelicula)
+
+        {{-- @dd($peliculas) --}}
         <li><a href="/movie/{{$pelicula->id}}">{{$pelicula->title}}: </a>
         {{$pelicula->rating}} - Género: {{$pelicula->genre->name}}</li>
         <p>actores</p>

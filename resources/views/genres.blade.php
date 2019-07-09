@@ -11,11 +11,11 @@
         <li>{{$genre->name}}</li>
         {{-- @dd($genre->movies); --}}
 
-        <ul>
+        {{-- <ul>
         @foreach ($genre->movies as $movie)
           <li>{{$movie->title}}</li>
         @endforeach
-        </ul>
+        </ul> --}}
       @empty
       @endforelse
     </ul>

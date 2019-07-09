@@ -33,7 +33,7 @@ no-navbar
     <form class="col-md-6 offset-md-3" action="/newpost" method="POST" enctype="multipart/form-data">
       <ul>
         @foreach ($errors->all() as $error)
-          @dd($errors->all())
+          {{-- @dd($errors->all()) --}}
           <li>{{$error}}</li>
         @endforeach
       </ul>
@@ -42,10 +42,12 @@ no-navbar
     <div class="form-group">
       <label for="title">Title</label>
       <input type="text" id="title" class="form-control" placeholder="Title" name="title" value="{{old('title')}}">
+      <small>{{$errors->first('title')}}</small>
     </div>
     <div class="form-group">
       <label for="excerpt">Excerpt</label>
       <input type="text" id="excerpt" class="form-control" placeholder="Excerpt" name="excerpt" value="">
+      <small>{{$errors->first('excerpt')}}</small>
     </div>
     <div class="form-group">
       <label for="content">Content</label>

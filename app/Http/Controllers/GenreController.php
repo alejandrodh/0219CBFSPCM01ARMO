@@ -83,4 +83,15 @@ class GenreController extends Controller
     {
         //
     }
+
+    /**
+     * Api
+     *
+     * @param  \App\Genre  $genre
+     * @return \Illuminate\Http\Response
+     */
+    public function genresApi()
+    {
+      return Genre::all();
+    }
 }

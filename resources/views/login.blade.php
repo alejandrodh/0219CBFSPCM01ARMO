@@ -2,9 +2,7 @@
 
 @section('title', 'Login') {{-- Versión corta solo para textos breves --}}
 
-@section('class')
-no-navbar
-@endsection
+@section('class', 'no-navbar')
 
 @section('main')
 <div class="nav-scroller py-1 mb-2">
@@ -46,4 +44,4 @@ no-navbar
 </div>
 @endsection
 
-@section('footer', '')
+@section('footer', '');

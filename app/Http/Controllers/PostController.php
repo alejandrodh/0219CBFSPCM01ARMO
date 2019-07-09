@@ -38,13 +38,14 @@ class PostController extends Controller
       //Paso 2: Antes vamos a validar los del formulario
 
       $rules = [ //https://laravel.com/docs/5.8/validation#rule-size
-        "title" => "string|max:255|filled",
-        "excerpt" => "string|max:255|",
+        "title" => "alpha_dash|max:255|filled",
+        "excerpt" => "|max:255|",
         "content" => "string|filled",
         "featured-image" => "image",
       ];
       $messages = [
         "filled" => ":attribute no puede estar vacío.",
+        "alpha_dash" => ":attribute debe ser alfa numérico.",
         "string" => ":attribute es debe ser texto.",
         "max" => ":attribute tiene un máximo de :max",
         "image"=>"el archivo debe ser del tipo .jpeg, .png, .bmp, .gif, o .svg"

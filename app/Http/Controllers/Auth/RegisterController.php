@@ -48,11 +48,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        $validations = [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'avatar' =>['image']
+          ];
+        $messages = [
+          'required' => ':attribute es obligatorio.',
+          'min' => ':attribute de tener al menos :min caracteres.',
+          'confirmed' => 'Las claves no coinciden.'
+        ];
+
+        return Validator::make($data, $validations, $messages);
     }
 
     /**
@@ -63,10 +71,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      //Paso 3 imagen:
+      $route = $data['avatar']->store('public/posts');
+      $fileName = basename($route); //función de php;
+      dd($route, $fileName);
+
+        dd($data);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'avatar' => $fileName,
         ]);
     }
 }

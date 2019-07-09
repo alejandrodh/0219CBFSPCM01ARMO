@@ -46,19 +46,24 @@
             <?php endif; ?>
           </div>
         </div>
+        <h2>Terminó Master</h2>
       </header>
-
+    
       @yield('main')
+
+      {{-- @yield('content') --}}
 
 
     @section('footer')
+      <h2>Empezó footer de Master</h2>
     <footer class="blog-footer">
       <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
       <p>
         <a href="#">Back to top</a>
       </p>
     </footer>
-    @show  {{-- Crear una sección y finalizarla con @show permite sobre escribirla o agregarle info en las vistas que la extienden. --}}
+    @show  {{-- Crear una sección y finalizarla con @show permite sobree
+    scribirla o agregarle info en las vistas que la extienden. --}}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
