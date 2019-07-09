@@ -23,8 +23,10 @@ class MovieController extends Controller
       //     "Captain Marvel",
       //     "The Mule",
       //   ];
+
         // $peliculas = Movie::paginate(5);
-        $peliculas = Movie::paginate(5);
+        $peliculas = Movie::orderBy("id", "desc")->get();
+
         $vac = compact('peliculas');
         return view('movies',$vac);
 
@@ -97,5 +99,9 @@ class MovieController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function api() {
+        return Movie::all();
     }
 }

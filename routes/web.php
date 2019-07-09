@@ -25,9 +25,19 @@
 //
 //   return view('peliculas',$vac);
 // });
+<<<<<<< HEAD
 Route::resource('/movies', 'movieController');
 Route::get('/genres', 'GenreController@index');
 Route::get('/movie/{movie}','movieController@show');
+=======
+
+Route::get("/gifRandom", "GifController@random");
+Route::get("/buscarGifs", "GifController@buscar");
+
+Route::get('/movies', 'MovieController@index');
+Route::get('/genres', 'GenreController@index');
+Route::get('/movie/{id}','MovieController@show');
+>>>>>>> a662e6c5f55f622341486fcbdfafdad44071933a
 Route::get('/actores', 'actorController@index');//El ejercicio pide directory pero index es el standard para listados.
 Route::get('/actor/{id}', 'actorController@show');
 Route::get("/actores/buscar", 'actorController@search');
